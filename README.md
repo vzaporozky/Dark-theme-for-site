@@ -2,15 +2,11 @@
 
 ## Installing
 
-- Download
-
-Download .zip file and unzip the file where you want
+- Download .zip file and unzip the file where you want
 
 _or_
 
--  Clone
-
-Clone from this repo:
+- Clone from this repo:
 
 ```
 git clone
