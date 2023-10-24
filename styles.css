@@ -1,0 +1,37 @@
+h1 {
+   text-align: center;
+}
+
+.main {
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   width: 300px;
+}
+.block {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+.block_input {
+   margin-top: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.input {
+   cursor: pointer;
+   min-width: 25px;
+   min-height: 25px;
+}
+.enter_class {
+   margin-right: 10px;
+}
+
+.text {
+   margin-right: 10px;
+}
