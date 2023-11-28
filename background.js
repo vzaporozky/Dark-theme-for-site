@@ -1,18 +1,6 @@
 const changeColor = async () => {
    const res = await chrome.storage.local.get(["listOfClass_forDarkTheme"]);
 
-   if (window.location.toString().indexOf("www.anilibria.tv") != -1)
-      document.querySelector("html").setAttribute("data-theme", "dark");
-
-   if (window.location.toString().indexOf("ru.wikipedia.org") != -1) {
-      let tables = document.querySelector("table");
-      let figurs = document.querySelectorAll("figcaption");
-      if (tables[0])
-         tables.forEach((table) => (table.style.backgroundColor = "#606060"));
-      if (figurs[0])
-         figurs.forEach((figur) => (figur.style.backgroundColor = "#606060"));
-   }
-
    window.location.toString();
 
    for (let link in res.listOfClass_forDarkTheme) {
@@ -30,6 +18,24 @@ const changeColor = async () => {
                }
             }
          }
+   }
+
+   if (window.location.toString().indexOf("www.anilibria.tv") != -1)
+      document.querySelector("html").setAttribute("data-theme", "dark");
+
+   if (window.location.toString().indexOf("test-english.com") != -1)
+      document.querySelector(".watupro-gap").style.color = "#000000";
+
+   if (window.location.toString().indexOf("ru.wikipedia.org") != -1) {
+      let tables = document.querySelector("table");
+      let figurs = document.querySelectorAll("figcaption");
+      let links = document.querySelectorAll("a");
+
+      if (tables[0])
+         tables.forEach((table) => (table.style.backgroundColor = "#606060"));
+      if (figurs[0])
+         figurs.forEach((figur) => (figur.style.backgroundColor = "#606060"));
+      if (links[0]) links.forEach((link) => (link.style.color = "#00e4ff"));
    }
 };
 
